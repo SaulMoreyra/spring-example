@@ -17,7 +17,7 @@
 <script type="text/javascript" src="<c:url value="/resources/js/bootstrap/jquery-3.6.0.min.js" />"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/bootstrap/bootstrap.min.js" />"></script>
 <script type="text/javascript"
-	src="https://www.coneval.org.mx/Style%20Library/wtscripts/google-analytics-sistemas.js"></script>
+	src="https://www.example.org.mx/Style%20Library/wtscripts/google-analytics-sistemas.js"></script>
 
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <title>${title}</title>

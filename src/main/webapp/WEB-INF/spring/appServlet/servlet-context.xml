@@ -22,7 +22,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<context:component-scan base-package="mx.org.coneval" />
+	<context:component-scan base-package="mx.org.example" />
  	<jee:jndi-lookup id="dataSource" jndi-name="java:/jdbc/SARCDB" resource-ref="true" />
 	
 	<!-- Hibernate 4 SessionFactory Bean definition -->
@@ -30,12 +30,12 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>mx.org.coneval.entity.Pdf</beans:value>
+				<beans:value>mx.org.example.entity.Pdf</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
 			<beans:props>
-				<beans:prop key="hibernate.dialect">mx.org.coneval.util.SQLServer2008Dialect</beans:prop>
+				<beans:prop key="hibernate.dialect">mx.org.example.util.SQLServer2008Dialect</beans:prop>
 				<beans:prop key="hibernate.show_sql">true</beans:prop>
 				<beans:prop key="hibernate.order_inserts">true </beans:prop>
         <beans:prop key="hibernate.order_updates">true </beans:prop>
@@ -45,14 +45,14 @@
         <beans:prop key="hibernate.default_batch_fetch_size">500</beans:prop>
 			</beans:props>
 		</beans:property>
-		<beans:property name="packagesToScan" value="mx.org.coneval" />
+		<beans:property name="packagesToScan" value="mx.org.example" />
 	</beans:bean>
 
-	<context:component-scan base-package="mx.org.coneval" />
-	<context:component-scan base-package="mx.org.coneval.controller" />
-	<context:component-scan base-package="mx.org.coneval.dao" />
-	<context:component-scan base-package="mx.org.coneval.service" />
-	<context:component-scan base-package="mx.org.coneval.entity" />
+	<context:component-scan base-package="mx.org.example" />
+	<context:component-scan base-package="mx.org.example.controller" />
+	<context:component-scan base-package="mx.org.example.dao" />
+	<context:component-scan base-package="mx.org.example.service" />
+	<context:component-scan base-package="mx.org.example.entity" />
 	
 	<tx:annotation-driven transaction-manager="transactionManagerSarc" />
 	

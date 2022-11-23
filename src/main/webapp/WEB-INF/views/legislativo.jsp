@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix='c' uri='http://java.sun.com/jstl/core_rt'%>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags"%>
-<%@page import="mx.org.coneval.constants.EjecutivoConstants"%>
+<%@page import="mx.org.example.constants.EjecutivoConstants"%>
 <%@page import="java.util.Map"%>
 
 

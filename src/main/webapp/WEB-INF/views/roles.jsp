@@ -51,7 +51,7 @@
 					      <th scope="row">${pdf.idPdf}</th>
 					      <td>${pdf.nombrePdf}</td>
 					      <td>
-					      <a href="/SARC" title="CONEVAL">
+					      <a href="/SARC" title="example">
 						      ${pdf.urlPdf}
 					      </a>
 					      </td>

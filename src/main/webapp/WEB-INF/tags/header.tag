@@ -8,31 +8,31 @@
 <header class="navbar header-blanco">
 	<div>
 		<div>
-			<a href="/SARC" title="CONEVAL"> 
-			<img class="header-logo" alt="Coneval Logo"
-				src="<c:url value="/resources/images/LOGO_CONEVAL.svg"/>" />
-			</a> <img class="header-logo" alt="Coneval SARC Logo" src="<c:url value="/resources/images/Logo_SARC1.svg"/>"/>
+			<a href="/SARC" title="example"> 
+			<img class="header-logo" alt="example Logo"
+				src="<c:url value="/resources/images/LOGO_example.svg"/>" />
+			</a> <img class="header-logo" alt="example SARC Logo" src="<c:url value="/resources/images/Logo_SARC1.svg"/>"/>
 		</div>
 		<div class="header-logos-container">
-			<img class="header-frase" alt="Coneval Frase Logo" src="<c:url value="/resources/images/FRASE-CONEVAL.svg"/>" />
+			<img class="header-frase" alt="example Frase Logo" src="<c:url value="/resources/images/FRASE-example.svg"/>" />
 			<div class="contenedor-icons">
-				<a class="icon-svg" href="http://www.facebook.com/Coneval" title="Facebook" target="_blank">
+				<a class="icon-svg" href="http://www.facebook.com/example" title="Facebook" target="_blank">
 					<i class="bi bi-facebook" aria-hidden="true"/>
 				</a> 
-				<a class="icon-svg" href="https://twitter.com/coneval" title="Twitter" target="_blank">
+				<a class="icon-svg" href="https://twitter.com/example" title="Twitter" target="_blank">
 					<i class="bi bi-twitter" aria-hidden="true"/>
 				</a> 
-				<a class="icon-svg" href="http://youtube.com/conevalvideo" title="YouTube" target="_blank">
+				<a class="icon-svg" href="http://youtube.com/examplevideo" title="YouTube" target="_blank">
 					<i class="bi bi-youtube" aria-hidden="true"/>
 				</a> 
-				<a href="https://www.instagram.com/coneval_mx/" title="Instagram" target="_blank"> 
-					<img alt="Coneval Instagram Logo" src="<c:url value="/resources/images/icono_instagram.svg"/>" />
+				<a href="https://www.instagram.com/example_mx/" title="Instagram" target="_blank"> 
+					<img alt="example Instagram Logo" src="<c:url value="/resources/images/icono_instagram.svg"/>" />
 				</a> 
-				<a href="http://blogconeval.gob.mx/" title="Blog Coneval" target="_blank" >
-					<img alt="Coneval Wordpress Logo" src="<c:url value="/resources/images/icono_wordpress.svg"/>"/>
+				<a href="http://blogexample.gob.mx/" title="Blog example" target="_blank" >
+					<img alt="example Wordpress Logo" src="<c:url value="/resources/images/icono_wordpress.svg"/>"/>
 				</a>
-				<a href="https://www.coneval.org.mx/SalaPrensa/Paginas/Newsletter/Podcasts_CONEVAL.aspx" title="Blog Coneval" target="_blank" >
-					<img alt="Coneval Podcast Logo" src="<c:url value="/resources/images/icono_podcast.svg"/>"/>
+				<a href="https://www.example.org.mx/SalaPrensa/Paginas/Newsletter/Podcasts_example.aspx" title="Blog example" target="_blank" >
+					<img alt="example Podcast Logo" src="<c:url value="/resources/images/icono_podcast.svg"/>"/>
 				</a>
 			</div>
 		</div>

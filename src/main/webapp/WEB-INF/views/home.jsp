@@ -37,14 +37,14 @@
 				<div id="sub-container-federal">
 					<a href="legislativo"> <span class="d-inline-block"
 						tabindex="0" data-toggle="tooltip" title="Legislativo">
-							<img alt="Coneval legislativo Logo"
+							<img alt="example legislativo Logo"
 							class="image image-legislativo" alt="legislativo"
 							src="<c:url value="/resources/images/icono_legislativo.jpg"/>" />
 					</span>
 					</a> 
 					<a href="ejecutivo"> <span class="d-inline-block" tabindex="0"
 						data-toggle="tooltip" title="Ejecutivo">
-							<img alt="Coneval Ejecutivo Logo"
+							<img alt="example Ejecutivo Logo"
 							src="<c:url value="/resources/images/icono_ejecutivo.jpg"/>" />
 					</span>
 					</a>

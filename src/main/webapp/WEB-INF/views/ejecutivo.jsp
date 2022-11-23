@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix='c' uri='http://java.sun.com/jstl/core_rt'%>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags"%>
-<%@page import="mx.org.coneval.constants.EjecutivoConstants"%>
+<%@page import="mx.org.example.constants.EjecutivoConstants"%>
 <%@page import="java.util.Map"%>
 
 
@@ -18,7 +18,7 @@
 				<tag:searchbar />
 			</div>
 			<div class="item item3">
-				<img alt="Coneval Ejecutivo Logo" alt="ejecutivo" src="<c:url value="/resources/images/icono_ejecutivo.jpg"/>" />
+				<img alt="example Ejecutivo Logo" alt="ejecutivo" src="<c:url value="/resources/images/icono_ejecutivo.jpg"/>" />
 			</div>
 			<div class="item item4">
 				<button class="btn btn-lg  main-button w-100 mt-6" type="button" id="btn-secretarias">
