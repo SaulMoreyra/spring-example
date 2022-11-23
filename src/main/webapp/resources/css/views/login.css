@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.main-container {
+	display: grid;
+	grid-template-columns: 30% auto;
+	grid-template-rows: auto 1fr;
+	grid-gap: 10px;
+	width: 100%;
+	min-height: calc(100vh - 255px);
+	justify-content: center;
+}
+
+.container-login {
+	grid-area: 1/1/span 1/span 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	grid-gap: 0.5em;
+	border: 1px solid #ccc;
+	border-radius: 16px;
+	margin-top: 2em;
+	background: #ccc;
+}
+
+#user {
+	width: 75%;
+	align-self: center;
+	background-color: #ccc;
+	border: 2px solid black;
+	border-radius: 8px;
+}
+
+#password {
+	width: 75%;
+	align-self: center;
+	background-color: #ccc;
+	border: 2px solid black;
+	border-radius: 8px;
+}
+
+#btnsave {
+	width: 50%;
+	align-self: center;
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	border-radius: 8px;
+	color: white;
+	background-color: #21409a;
+}
+
+label {
+	align-self: center;
+	margin-top: 1em;
+}
+
+@media screen and (max-width: 850px) {
+	.container-login {
+		width: 200%;
+		align-self: center;
+		margin-left: -40%;
+	}
+}

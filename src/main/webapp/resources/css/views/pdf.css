@@ -1,0 +1,33 @@
+.main-container {
+  display: grid;
+  grid-template-rows: 15% auto 10%;
+  grid-gap: 10px;
+  width: 100%;
+  min-height: calc(100vh - 255px);
+}
+
+.item {
+  padding: 20px;
+}
+
+.element-pdf {
+  margin-bottom: 1rem;
+  color: #21409a;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.element-pdf > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 3rem;
+  width: 3rem;
+  background-color: red;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}

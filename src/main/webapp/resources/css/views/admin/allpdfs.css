@@ -1,0 +1,22 @@
+.main-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  width: 100%;
+  min-height: calc(100vh - 255px);
+}
+
+.item {
+  padding: 20px;
+}
+
+.button-add {
+  display: flex; 
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.header-table {
+  display: flex; 
+  justify-content: space-between;
+}

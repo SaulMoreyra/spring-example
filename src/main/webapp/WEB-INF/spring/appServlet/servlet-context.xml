@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<mvc:annotation-driven/>
+	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<context:component-scan base-package="mx.org.coneval" />
+ 	<jee:jndi-lookup id="dataSource" jndi-name="java:/jdbc/SARCDB" resource-ref="true" />
+	
+	<!-- Hibernate 4 SessionFactory Bean definition -->
+	<beans:bean id="sessionFactorySarc" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="annotatedClasses">
+			<beans:list>
+				<beans:value>mx.org.coneval.entity.Pdf</beans:value>
+			</beans:list>
+		</beans:property>
+		<beans:property name="hibernateProperties">
+			<beans:props>
+				<beans:prop key="hibernate.dialect">mx.org.coneval.util.SQLServer2008Dialect</beans:prop>
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
+				<beans:prop key="hibernate.order_inserts">true </beans:prop>
+        <beans:prop key="hibernate.order_updates">true </beans:prop>
+        <beans:prop key="hibernate.jdbc.batch_versioned_data">true</beans:prop>
+        <beans:prop key="hibernate.jdbc.fetch_size">500</beans:prop>
+        <beans:prop key="hibernate.jdbc.batch_size">500</beans:prop>
+        <beans:prop key="hibernate.default_batch_fetch_size">500</beans:prop>
+			</beans:props>
+		</beans:property>
+		<beans:property name="packagesToScan" value="mx.org.coneval" />
+	</beans:bean>
+
+	<context:component-scan base-package="mx.org.coneval" />
+	<context:component-scan base-package="mx.org.coneval.controller" />
+	<context:component-scan base-package="mx.org.coneval.dao" />
+	<context:component-scan base-package="mx.org.coneval.service" />
+	<context:component-scan base-package="mx.org.coneval.entity" />
+	
+	<tx:annotation-driven transaction-manager="transactionManagerSarc" />
+	
+ 	<bean id="transactionManagerSarc" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    	<property name="sessionFactory" ref="sessionFactorySarc" />
+  	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		 <property name="maxUploadSize" value="8388608"></property>
+	</bean>
+
+	<mvc:default-servlet-handler/>
+</beans>

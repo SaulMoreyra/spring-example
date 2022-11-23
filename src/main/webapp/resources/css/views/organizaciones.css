@@ -1,0 +1,27 @@
+.main-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+}
+
+.item {
+  padding: 20px;
+}
+
+.organization {
+  display: grid;
+  grid-template-rows: 30% auto;
+  grid-gap: 10px;
+  max-width: 600px;
+}
+
+.organization > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.organization > div > img {
+  height: 40px;
+  margin-right: 1rem;
+}
